@@ -6,7 +6,7 @@ header {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background-color: orange;
+    background-color: rgb(220, 139, 205);
     background-image: url("https://www.transparenttextures.com/patterns/brick-wall.png");
    
   }
