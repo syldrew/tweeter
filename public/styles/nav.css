@@ -1,0 +1,10 @@
+nav {
+    padding: 0 1.5em;
+    height: 120px;
+    width: 100%;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+  }
