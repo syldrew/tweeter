@@ -1,14 +1,12 @@
 $(document).ready(function() {
-    const $textarea = $(".new-tweet-text");
-    $textarea.on("input", function(e) {
-      e.preventDefault;
-      const $tweetLength = $(this).val().length;
-      const $counter = $(this).next().children(".counter");
-      $counter.text(140 - $tweetLength);
-      if ($tweetLength > 140) {
-        $counter.addClass("invalid");
+    $('#tweet-text').on('input', function() {
+     const textarea = 140 - $(this).val().length;
+     const $counter = $(this).parent().find(".counter");
+     $counter.text(textarea);
+      if (textarea < 0) {
+        $counter.addClass("counter-red");
       } else {
-        $counter.removeClass("invalid");
+        $counter.removeClass("counter-red");
       }
     });
   });
