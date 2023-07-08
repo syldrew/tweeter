@@ -4,9 +4,9 @@ $(document).ready(function() {
      const $counter = $(this).parent().find(".counter");
      $counter.text(textarea);
       if (textarea < 0) {
-        $counter.addClass("counter-red");
+        $counter.css("color", "red");
       } else {
-        $counter.removeClass("counter-red");
+        $counter.css("color", "black");
       }
     });
   });
