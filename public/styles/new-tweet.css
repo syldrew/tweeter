@@ -2,7 +2,7 @@ form {
     display: flex;
     flex-direction: column;
   }
-  
+  /*   */
   .counter {
     font-family: inherit;
   }
@@ -10,7 +10,7 @@ form {
   .new-tweet-text {
     border: none;
     background: none;
-    border-bottom: 0.2rem solid #545150;
+    border-bottom: 0.4rem solid #545150;
     resize: none;
   }
   
@@ -26,18 +26,17 @@ form {
   }
   
   .new-tweet-button {
-    border: none;
     background-color: #4956a1;
     color: #f4f1ec;
   }
   
   .invalid {
-    color: red;
+    color: rgb(195, 49, 49);
   }
   
   .invalid-icon {
     display: none;
-    border: 0.3rem solid red;
+    border: 0.4rem solid red;
     padding: 1rem;
     color: red;
   }
