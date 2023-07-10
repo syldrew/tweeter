@@ -1,11 +1,11 @@
-.tweet-container {
+.tweet-cont {
     margin-top: 3rem;
     border: 4px solid #545149;
     background-color: #f4f1ec;
     padding: 1rem;
   }
   
-  .tweet-container:hover {
+  .tweet-cont:hover {
     box-shadow: 5px 5px rgb(185 190 221);
   }
   .tweet-header {
