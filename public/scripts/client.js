@@ -51,7 +51,22 @@
       event.preventDefault(); //use event.preventDefault() to prevent the default form submission behaviour.
       // The jQuery .serialize() function turns a set of form data into a query string. This serialized data 
       // should be sent to the server in the data field of the AJAX POST request.
-      const formData = $form.serialize(); //
+      const formData = $form.serialize(); 
+
+
+      //Form Validation. Use the built-in browser alert function
+      const tweetContent = $form.find("textarea[name='text']").val().trim();
+      if (tweetContent === "") {
+        alert("Please write a Tweet!");
+        return;
+      }
+      if (tweetContent.length > 140) {
+        alert("This tweet is to long!!!!");
+        return;
+      }
+
+
+
       // create an AJAX POST request in client.js that sends the form data to the server.
       $.ajax({
         url: "http://localhost:8080/tweets",
@@ -60,13 +75,14 @@
         }).then(() => {
         loadTweets();
       });
-
       console.log(event);
       $form[0].reset();
     });
   });
 
   const renderTweets = function(tweets) {
+     // Clear previous tweets
+    $('#tweets-container').empty();
     // loops through tweets
     for (const tweet of tweets) {
       // calls createTweetElement for each tweet
