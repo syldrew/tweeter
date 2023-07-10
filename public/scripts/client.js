@@ -25,6 +25,25 @@ const data = [
     }
   ];
 
+  $(document).ready(function() {
+      const $form = $("form");
+       // add an event listener that listens for the submit event
+      $form.submit((event) => {
+      // prevent the default behaviour of the submit event (data submission and page refresh)
+      event.preventDefault(); //use event.preventDefault() to prevent the default form submission behaviour.
+      // The jQuery .serialize() function turns a set of form data into a query string. This serialized data 
+      // should be sent to the server in the data field of the AJAX POST request.
+      const formData = $form.serialize(); //
+      // create an AJAX POST request in client.js that sends the form data to the server.
+      $.ajax({
+        url: "http://localhost:8080/tweets",
+        method: "POST",
+        data: formData,
+      });
+      console.log(event);
+      $form[0].reset();
+    });
+  });
 
   const renderTweets = function(tweets) {
     // loops through tweets
