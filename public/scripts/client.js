@@ -77,6 +77,7 @@
       });
       console.log(event);
       $form[0].reset();
+      $(".counter").val(140);
     });
   });
 
@@ -88,7 +89,8 @@
       // calls createTweetElement for each tweet
       const $tweetElement = createTweetElement(tweet);
       // takes return value and appends it to the tweets container
-      $('#tweets-container').append($tweetElement);
+    //   $('#tweets-container').append($tweetElement);
+         $('#tweets-container').prepend($tweetElement);
   
     }
   };
