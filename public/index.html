@@ -44,12 +44,13 @@
         </div>
     </header>
     <!-- Page-specific (main) content here -->
-    <main class="container">
+   <main class="container">
     <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form action="/tweets" method="POST">
             <label class="new-tweet-text-label" for="tweet-text">What are you humming about?</label>
-          <textarea name="text" id="tweet-text" class="new-tweet-text"></textarea>
+          <textarea name="text" id="tweet-text" class="new-tweet-text">
+          </textarea>
           <div class="new-tweet-button-container">
             <button class="new-tweet-button" type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text"
@@ -57,8 +58,8 @@
             >
           </div>
         </form>
-        <section id="tweets-container">
-        <article class="tweet-cont">
+        <section id="tweets-container"> 
+     <!--   <article class="tweet-cont">
             <div class="tweet-header"> <div class="tweet-userName">
                 <img src="/images/Newton.png" alt="Avatar"/>
                 <h3>Newton</h3>
@@ -77,8 +78,8 @@
                 <i class="fas fa-solid fa-heart"></i>
               </div>
             </div>
-          </article>
+          </article>-->
         </section>
-        </main>
+        </main> 
 </body>
 </html>
