@@ -1,6 +1,7 @@
  $(document).ready(function() {
       const $form = $("form");
          //The loadtweets function will use jQuery to make a request to /tweets and receive the array of tweets as JSON.
+      const $error = $("#error");
       const loadTweets = function() {
         // Make a GET request to the server using Ajax
         $.ajax({
@@ -18,17 +19,20 @@
       $form.submit((event) => {
         // Prevent the default behaviour of the submit event (data submission and page refresh)
       event.preventDefault(); //use event.preventDefault() to prevent the default form submission behaviour.
+      $error.hide();
         // The jQuery .serialize() function turns a set of form data into a query string. This serialized data 
         // Should be sent to the server in the data field of the AJAX POST request.
       const formData = $form.serialize(); 
         //Form Validation. Use the built-in browser alert function
       const tweetContent = $form.find("textarea[name='text']").val().trim();
       if (tweetContent === "") {
-        alert("Please write a Tweet!");
+        // alert("Please write a Tweet!");
+        showError("Please write a Tweet!")
         return;
       }
       if (tweetContent.length > 140) {
-        alert("This tweet is to long!!!!");
+        // alert("This tweet is to long!!!!");
+        showError("This tweet is to long!!!!")
         return;
       }
        // create an AJAX POST request in client.js that sends the form data to the server.
@@ -42,7 +46,14 @@
       console.log(event);
       $form[0].reset();
       $(".counter").val(140);
+      $(".invalid").slideUp();
     });
+
+   // Function to show the error message
+   const showError = function(message) {
+    $error.find("#message").text(message);
+    $error.slideDown();
+   };
   });
   const renderTweets = function(tweets) {
      // Clear previous tweets
