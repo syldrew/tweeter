@@ -52,7 +52,7 @@
    // Function to show the error message
    const showError = function(message) {
     $error.find("#message").text(message);
-    $error.slideDown();
+    $error.slideDown(); //Use the slideDown jQuery function for some simple animation.
    };
   });
   const renderTweets = function(tweets) {
