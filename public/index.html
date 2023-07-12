@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1,  maximum-scale=1.0"/>
+
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
 
     <!--Font Awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Bungee and Source Sans Pro Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet"/>
 
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
@@ -21,67 +30,52 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
-    <script type="text/javascript" src="scripts/composer-char-counter.js"></script>
+    <script type="text/javascript" src="./scripts/client.js"></script>
+    <script type="text/javascript" src="./scripts/composer-char-counter.js"></script>
  
     <!--Timego Library-->
-
-    <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
-    integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
+    
    <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span class="nav-left">Tweeter</span>
+      <span class="nav-left"><strong>Tweeter</strong></span>
       <div class="nav-right">
         <span><strong>Write</strong> a new tweet</span>
         <i class="fa-solid fa-angles-down"></i>
       </div>
     </nav>
+    <div class="hero-container">
     <header>
-        <div>
-            <img src="/images/profile-hex.png"> 
+         <div id="profile">
+            <img class="profile-img" src="./images/profile-hex.png" />
         </div>
-        <br>
         <div class="profile-name">
             <h2>Silvia Chavez</h2>
         </div>
     </header>
+
     <!-- Page-specific (main) content here -->
    <main class="container">
     <section class="new-tweet">
-        <!-- <h2>Compose Tweet</h2> -->
-
         <div class="invalid-icon" id="error">
-            <i
-              id="icon"
-              class="fa-solid fa-triangle-exclamation"
-              style="color: #ff0000"
-            ></i>
+            <i id="icon" class="fa-solid fa-triangle-exclamation" ></i>
             <span id="message"></span>
-            <i
-              id="icon"
-              class="fa-solid fa-triangle-exclamation"
-              style="color: #ff0000"
-            ></i>
-          </div>
-          
+            <i id="icon" class="fa-solid fa-triangle-exclamation" ></i>
+        </div>  
         <form action="/tweets" method="POST">
             <label class="new-tweet-text-label" for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text" class="new-tweet-text">
           </textarea>
           <div class="new-tweet-button-container">
             <button class="new-tweet-button" type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text"
-              >140</output>
+            <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
-        <section id="tweets-container"> 
-        </section>
+    </section>
+        <section id="tweets-container"> </section>
         </main> 
+    </div>
 </body>
 </html>
