@@ -1,0 +1,36 @@
+@use "breakpoints" as breakpoints;
+
+ html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    color: #545150;
+    background-color: #f4f1ec;
+    font-size: 24px;
+    font-family: "Source Sans Pro", sans-serif;
+  }
+  
+   main {
+      display: block;
+      width: 90%;
+      margin: 0 auto;
+      background-color: #f4f1ec;
+      padding-top: 2rem;
+      @include breakpoints.medium {
+        padding-top: 0;
+    }
+}
+
+    .hero-container {
+        display: block;
+        @include breakpoints.medium {
+        display: flex;
+        align-items: flex-start;
+        padding: 9rem 2rem;
+        gap: 3rem;
+      }
+    }
