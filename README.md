@@ -16,3 +16,19 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+
+## Final Product 
+
+*Main page*
+![Alt text](/Docs/Main_Page.png)
+
+*Blank Tweet Error*
+![Alt text](/Docs/Blank_tweet_Error.png)
+
+*Long Tweet Error*
+![Alt text](/Docs/Long_tweet_Error.png)
+
+
+
+
