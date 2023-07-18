@@ -20,8 +20,6 @@
     margin-left: 75px;
   }
   
-  
-  
   .article-header span {
     font-weight: 600;
   }
@@ -29,7 +27,6 @@
   .handle {
     color: rgb(185, 190, 221);
   }
-  
   
   .tweet-cont:hover {
     box-shadow: 5px 5px rgb(185 190 221);
@@ -53,6 +50,7 @@
     font-weight: 600;
     color: rgb(185 190 221);
   }
+
   .tweet-userName {
     display: flex;
     justify-content: space-between;
@@ -79,10 +77,12 @@
   .timestamp {
     font-size: 2rem;
   }
+
   .tweet-footer-icons {
     padding-left: 0.5rem;
     color: #4056a1;
   }
+  
   .fas:hover {
     color: #e5bd62;
   }
