@@ -40,23 +40,23 @@
       $form[0].reset();
       $(".counter").val(140);
       $(".invalid").slideUp();
-    });
+     });
 
-   const showError = function(message) {                 // Function to show the error message
-    $error.find("#message").text(message);
-    $error.slideDown();                                  //Use the slideDown jQuery function for some simple animation.
-   };
-  });
+      const showError = function(message) {                  // Function to show the error message
+      $error.find("#message").text(message);
+      $error.slideDown();                                    //Use the slideDown jQuery function for some simple animation.
+     };
+     });
 
-  const renderTweets = function(tweets) {
-    $('#tweets-container').empty();                       // Clear previous tweets
-    for (const tweet of tweets) {                         // loops through tweets
-     const $tweetElement = createTweetElement(tweet);     // Calls createTweetElement for each tweet
+      const renderTweets = function(tweets) {
+       $('#tweets-container').empty();                       // Clear previous tweets
+       for (const tweet of tweets) {                         // loops through tweets
+      const $tweetElement = createTweetElement(tweet);       // Calls createTweetElement for each tweet
          $('#tweets-container').prepend($tweetElement);
-    }
-  };
+       }
+     };
 
-     // Your code for creating the tweet element 
+     //code for creating the tweet element 
     const createTweetElement = function(tweet) {
     const $tweet = $('<article>').addClass('tweet');
     const $header = $("<div>").addClass("article-header");
