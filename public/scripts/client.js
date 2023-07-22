@@ -7,7 +7,7 @@
           url: "http://localhost:8080/tweets",
           method: "GET",
         }).then((res) => {
-          console.log("render Tweets: ", res);
+      
           renderTweets(res);
         });
       };
@@ -36,7 +36,7 @@
         }).then(() => {
         loadTweets();
       });
-      console.log(event);
+
       $form[0].reset();
       $(".counter").val(140);
       $(".invalid").slideUp();
